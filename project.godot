@@ -8,9 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Paddle",
+"language": "GDScript",
+"path": "res://scenes/paddle/Paddle.gd"
+}, {
+"base": "Area2D",
+"class": "Wall",
+"language": "GDScript",
+"path": "res://scenes/wall/Wall.gd"
+} ]
+_global_script_class_icons={
+"Paddle": "",
+"Wall": ""
+}
+
 [application]
 
 config/name="Pong2"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -21,6 +38,29 @@ window/size/test_width=1200
 window/size/test_height=800
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[input]
+
+left_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+left_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+right_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+right_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 

@@ -1,5 +1,3 @@
 [gd_scene format=2]
 
 [node name="Game" type="Node2D"]
-
-[node name="PaddleContainer" type="Node2D" parent="."]
